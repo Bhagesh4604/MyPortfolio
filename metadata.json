@@ -1,0 +1,7 @@
+{
+  "name": "Bhagesh Biradar Portfolio",
+  "description": "A futuristic AI-Native dashboard portfolio for Bhagesh Biradar, showcasing expertise in Data Science, Web3, and MERN development.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

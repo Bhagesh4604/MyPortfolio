@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagesh Biradar | AI-Native Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #f8fafc;
+            overflow-x: hidden;
+            /* Hide default cursor to use custom one */
+            cursor: none;
+            min-height: 100vh;
+        }
+        .mono { font-family: 'Fira Code', monospace; }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #000000; }
+        ::-webkit-scrollbar-thumb {
+            background: #111111;
+            border: 1px solid #222222;
+            border-radius: 10px;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        
+        .glass-terminal {
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .accent-glow {
+            box-shadow: 0 0 20px -5px rgba(190, 242, 100, 0.3);
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(5px, -5px); }
+            50% { transform: translate(-5px, 5px); }
+            75% { transform: translate(5px, 5px); }
+            100% { transform: translate(0, 0); }
+        }
+        .tech-drift { animation: drift 8s ease-in-out infinite; }
+
+        /* Custom Cursor Styles */
+        #custom-cursor {
+            width: 8px;
+            height: 8px;
+            background-color: #bef264;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out;
+            box-shadow: 0 0 10px #bef264;
+        }
+        #cursor-ring {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(190, 242, 100, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.15s ease-out, width 0.3s, height 0.3s, border-color 0.3s;
+        }
+        
+        /* Interactive element hover states */
+        .cursor-hover #cursor-ring {
+            width: 60px;
+            height: 60px;
+            border-color: #bef264;
+            background-color: rgba(190, 242, 100, 0.1);
+        }
+        .cursor-hover #custom-cursor {
+            transform: scale(1.5);
+        }
+
+        /* Ensure interactive elements show they are clickable even without native cursor */
+        a, button, input, select, textarea, .clickable {
+            cursor: none !important;
+        }
+
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce-subtle {
+            animation: bounce-subtle 2s ease-in-out infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
